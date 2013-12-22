@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+/ChaosDruids/nbproject/private/
+/ChaosDruids/build/
+/ChaosDruids/dist/
