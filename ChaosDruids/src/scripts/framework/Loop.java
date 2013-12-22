@@ -16,15 +16,11 @@ public class Loop {
     /**
      * The main script loop. Should return based on a delay
      * set by the Initializer.
-     * 
-     * @return
      */
-    public int loop() {
-        if(!executeActions()) {
-            return -1;
+    public void loop() {
+        while(executeActions()) {
+            General.sleep(this.loopSpeed);
         }
-        General.sleep(this.loopSpeed);
-        return loop();
     }
 
     private boolean processAction(final Action action) {
