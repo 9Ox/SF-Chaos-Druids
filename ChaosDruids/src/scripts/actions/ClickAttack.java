@@ -34,7 +34,7 @@ public class ClickAttack extends Action {
         RSNPC[] candidates = NPCs.findNearest(NPCs.generateFilterGroup(new Filter<RSNPC>() {
             @Override
             public boolean accept(RSNPC t) {
-                return t.getName().equalsIgnoreCase("chaos druid") && !t.isInCombat();
+                return t != null && t.getName().equalsIgnoreCase("chaos druid") && !t.isInCombat();
             }
         }));
         if(candidates.length > 0) {
